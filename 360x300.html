@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bilforsikring_360x300</title>
+
+	<style type="text/css">
+		body {
+			margin: 0;
+		}
+
+		#ad {
+			background: #d7e8e5 url(gfx/bilforsikring-bg.png) left bottom no-repeat;
+			color: #08452c;
+			display: block;
+			font: 16px Helvetica, Arial, sans-serif;
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+			text-decoration: none;
+			width: 360px;
+			height: 300px;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#ad a {
+			color: #08452c;
+		}
+
+		.title {
+			display: block;
+			font-size: 1.5em;
+			font-weight: 400;
+			margin: 30px 0 20px;
+			text-shadow: 0 1px 1px rgba(255,255,255,.6);
+		}
+
+		form input {
+			border-radius: 4px;
+			font-family: inherit;
+			font-size: 1.2em;
+			-webkit-font-smoothing: antialiased;
+			outline: none;
+		}
+
+		form a {
+			font-size: .9em;
+			display: block;
+			margin-top: 10px;
+		}
+
+		.textinput {
+			background: #fff url(gfx/icon-car.png) 10px center no-repeat;
+			border: 2px solid #a5bab1;
+			padding: 10px 10px 10px 40px;
+			vertical-align: middle;
+			width: 30%;
+		}
+
+		.textinput:focus {
+			background-position: -390px center;
+			border-color: #643182;
+		}
+
+		.button {
+			background: #66407e;
+			border: none;
+			box-shadow: 0 2px 5px rgba(0,0,0,.2);
+			color: #fff;
+			cursor: pointer;
+			font-weight: bold;
+			margin: 0;
+			padding: 10px 15px;
+			vertical-align: middle;
+			text-shadow: 0 1px 1px rgba(0,0,0,1);
+		}
+
+		.button:hover,
+		.button:focus {
+			background: #744d8d;
+			outline: none;
+		}
+
+		.logo {
+			position: absolute;
+			right: 5px;
+			bottom: 5px;
+		}
+
+		.logo img {
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="ad">
+		<div class="title">Spar penger på forsikring. Sammenlign og kjøp online!</div>
+		<form action="https://www.penger.no/bilforsikring" method="get" target="_blank">
+			<input type="hidden" value="VG_Bil_bilmedregnr2" name="WT.mc_id" />
+			<input type="text" id="regnr" name="regnr" class="textinput" pattern="[A-Za-z]{2}\d{5}$" placeholder="Regnr.">
+			<input type="submit" class="button" value="Vis tilbud"/><br/>
+			<a href="https://www.penger.no/bilforsikring?WT.mc_id=VG_Bil_bilmedregnr2" target="_blank">Jeg husker ikke bilens regnr.</a>
+		</form>
+		<a class="logo" href="https://www.penger.no/?WT.mc_id=VG_Bil_bilmedregnr2" target="_blank"><img src="gfx/logo.png"></a>
+	</div>
+
+	<script type="text/javascript">
+
+		if(!('placeholder' in document.createElement("input"))) {
+			var regnr = document.getElementById('regnr');
+			var placholderText = regnr.getAttribute('placeholder');
+			regnr.value = placholderText;
+			regnr.onfocus = function() { if (regnr.value === placholderText) regnr.value = ''; };
+			regnr.onblur = function() { if (regnr.value === '') regnr.value = placholderText; };
+		}
+
+	</script>
+
+</body>
+</html>
